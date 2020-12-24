@@ -1,12 +1,264 @@
 html {
     width: 100%;
     height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
+body {
+    width: 100%;
+    height: 100%;
+    min-width: 200px;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(71, 71, 71, 0.9);
+}
+
+/* Header */
 header .mobile {
     display: none;
 }
 
+header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+}
+
+.header-content {
+    display: flex;
+    height: 64px;
+}
+
+.logo {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    padding-left: 24px;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgba(71, 71, 71, 0.9);
+}
+
+strong {
+    color: black;
+}
+
+.header-nav {
+    width: 70%;
+    height: 100%;
+    padding-right: 24px;
+}
+
+header nav ul, footer nav ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 16px;
+    float: right;   
+}
+
+.header-nav a, footer a {
+    text-decoration: none;
+    padding-left: 16px;
+    color: rgba(71, 71, 71, 0.9);
+}
+
+.main-content {
+    position: relative; /* To offset for fixed header. */
+    top: 64px;
+}
+
+/* Banner section */
+.banner-section {
+    width: 100%;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.banner-section img {
+    padding: 32 24;
+    width: 60%;
+    overflow: hidden;
+}
+
+.banner-text {
+    width: 40%;
+}
+
+button {
+    background-color: rgba(71, 71, 71, 0.9);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 250px;
+    height: 50px;
+}
+
+/* Main info */
 .main-info-2-mobile {
     display: none;
+}
+
+.main-info {
+    width: 100%;
+    background-color: white;
+    display: flex;
+}
+
+.main-info-1 {
+    width: 60%;
+    overflow: hidden;
+    padding: 32 24;
+    border-right: 1px solid lightgray;
+}
+
+.main-info-1-text {
+    padding: 32 0;
+}
+
+.main-info-1-text h2 {
+    margin: 0;
+    padding-bottom: 24px;
+}
+
+.main-info-1 img {
+    width: 100%;
+}
+
+.main-info-2-desktop {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.main-info-2-desktop a {
+    text-decoration: none;
+}
+
+.oc, .gl {
+    border-top: 1px solid lightgray;
+}
+
+.od, .oc, .gl {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.od img, .oc img, .gl img {
+    width: 35%;
+    height: auto;
+    padding: 16px;
+}
+
+/* Course section */
+
+.course-sec {
+    width: 100%;
+    background-color: lightgray;
+}
+
+.course-sec h2 {
+    text-align: center;
+    padding-top: 32px;
+    margin: 0;
+}
+
+.course-sec-img {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 32 40;
+}
+
+.course-block {
+    background-color: white;
+    width: 532px;
+    margin: 32px;
+}
+
+.course-text {
+    padding: 16px;
+}
+
+.course {
+    padding: 8 0;
+}
+
+/* Thesis section */
+
+.thesis-sec {
+    width: 100%;
+}
+
+.thesis-sec h2 {
+    text-align: center;
+    padding: 32 0;
+    margin: 0;
+}
+
+.thesis-sec-both {
+    display: flex;
+}
+
+.thesis-sec-1 {
+    width: 60%;
+    padding: 32 24;
+}
+
+.thesis-sec-1 h3 {
+    padding: 24 0 8 0;
+    margin: 0;
+}
+
+.thesis-sec-1 video {
+    width: 100%;
+}
+
+.thesis-sec-2 {
+    width: 40%;
+    padding: 32 0;
+}
+
+.thesis-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.thesis-block img {
+    padding: 16px;
+    width: 35%;
+    height: auto;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    padding: 16 24;
+    border-top: 1px solid lightgray;
+}
+
+.footer-left {
+    width: 50%;
+}
+
+.footer-right {
+    width: 50%;
+    float: right;
+}
+
+.nav-footer {
+    float: right;
+}
+
+footer a, footer p {
+    font-size: 10px;
 }
