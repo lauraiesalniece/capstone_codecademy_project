@@ -9,16 +9,13 @@ body {
     width: 100%;
     height: 100%;
     min-width: 200px;
-    margin: 0;
+    margin: auto;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgba(71, 71, 71, 0.9);
 }
 
 /* Header */
-header .mobile {
-    display: none;
-}
 
 header {
     position: fixed;
@@ -32,7 +29,7 @@ header {
     height: 64px;
 }
 
-.logo {
+.logo-desktop {
     width: 30%;
     height: 100%;
     display: flex;
@@ -40,7 +37,7 @@ header {
     align-items: center;
 }
 
-.logo a {
+.logo-desktop a {
     text-decoration: none;
     color: rgba(71, 71, 71, 0.9);
 }
@@ -73,6 +70,38 @@ header nav ul, footer nav ul {
     top: 64px;
 }
 
+.header-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    header nav, header nav ul {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .logo {
+        padding: 0;
+    }
+
+    .header-mobile {
+        display: flex;
+    }
+
+    .header-content {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    body {
+        width: 80%;
+    }
+    header {
+        width: 80%;
+    }
+}
+
 /* Banner section */
 .banner-section {
     width: 100%;
@@ -82,7 +111,7 @@ header nav ul, footer nav ul {
 }
 
 .banner-section img {
-    padding: 32 24;
+    padding: 32px 24px;
     width: 60%;
     overflow: hidden;
 }
@@ -91,12 +120,42 @@ header nav ul, footer nav ul {
     width: 40%;
 }
 
-button {
-    background-color: rgba(71, 71, 71, 0.9);
+a.button {
+    text-decoration: none;
+    box-sizing: border-box;
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 250px;
-    height: 50px;
+    background-color: rgba(71, 71, 71, 0.9);
+    padding: 8 50;
+}
+
+@media only screen and (max-width: 768px) {
+    .banner-section {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .banner-section img {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    .banner-text {
+        width: auto;
+        padding: 32px 16px;
+        overflow: hidden;
+    }
+
+    .banner-text h1 {
+        margin: 0;
+        padding-bottom: 32px;
+    }
+
+    .banner-text p {
+        margin: 0;
+        padding-bottom: 24px;
+    }
 }
 
 /* Main info */
@@ -157,6 +216,36 @@ button {
     padding: 16px;
 }
 
+@media only screen and (max-width: 768px) {
+    .main-info-1, .main-info-2-desktop {
+        display: none;
+    }
+
+    .main-info-2-mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .main-info-mobile-text {
+        padding: 32px 16px;
+    }
+
+    .main-info-mobile-text h3 {
+        margin: 0;
+    }
+
+    .main-info-2-mobile a {
+        text-decoration: none;
+    }
+
+    .main-info-2-mobile img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 /* Course section */
 
 .course-sec {
@@ -174,6 +263,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     padding: 32 40;
+    justify-content: space-around;
 }
 
 .course-block {
@@ -188,6 +278,46 @@ button {
 
 .course {
     padding: 8 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .course-block img {
+        display: none;
+    }
+
+    .course-text p {
+        display: none;
+    }
+
+    .course-sec {
+        background-color: white;
+        border-top: 1px solid lightgray;
+    }
+
+    .course-sec-img {
+        padding: 16px 16px 32px 16px;
+    }
+
+    .course-sec h2 {
+        margin: 0;
+        padding-top: 32px;
+    }
+
+    .course-text {
+        background-color: lightgray;
+        color: rgba(71, 71, 71, 0.9);
+        padding: 0;
+    }
+
+    .course-text h3 {
+        margin: 0;
+        margin-bottom: 8px;
+        padding: 16px 16px 24px 16px;
+    }
+
+    .course-block {
+        margin: auto;
+    }
 }
 
 /* Thesis section */
@@ -238,6 +368,26 @@ button {
     height: auto;
 }
 
+@media only screen and (max-width: 768px) {
+    .thesis-sec-2, .thesis-sec-1 h3, .thesis-sec-1 p {
+        display: none;
+    }
+
+    .thesis-sec-1 {
+        width: 100%;
+        padding: 0;
+        padding-bottom: 24px;
+    }
+}
+
+.thesis-sec {
+    border-top: 1px solid lightgray;
+}
+
+.thesis-sec h2 {
+    padding: 32px 0px 16px 0px;
+}
+
 /* Footer */
 
 .footer {
@@ -261,4 +411,20 @@ button {
 
 footer a, footer p {
     font-size: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        border-top: none;
+        padding: 0;
+    }
+
+    .footer-right {
+        display: none;
+    }
+
+    .footer-left {
+        width: 100%;
+        padding: 16px;
+    }
 }
